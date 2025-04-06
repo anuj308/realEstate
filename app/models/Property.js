@@ -18,7 +18,7 @@ const PropertySchema = new mongoose.Schema({
     type: String,
     required: [true, 'Please provide a location for the property'],
     enum: {
-      values: ['lawgate', 'green-valley', 'highland-park'],
+      values: ['lawgate', 'green-valley', 'near-lpu'],
       message: '{VALUE} is not a valid location'
     }
   },

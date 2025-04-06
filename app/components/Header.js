@@ -26,8 +26,8 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="/?location=highland-park" className="text-gray-700 hover:text-primary transition">
-                Highland Park
+              <Link href="/?location=near-lpu" className="text-gray-700 hover:text-primary transition">
+                Near LPU
               </Link>
             </li>
           </ul>

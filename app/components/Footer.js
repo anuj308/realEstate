@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-semibold mb-4">Dream Homes</h3>
             <p className="text-gray-300">
-              Find your perfect property in Lawgate, Green Valley, and Highland Park with our exclusive listings.
+              Find your perfect property in Lawgate, Green Valley, and Near LPU with our exclusive listings.
             </p>
           </div>
           
@@ -31,8 +31,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/?location=highland-park" className="text-gray-300 hover:text-white transition">
-                  Highland Park Properties
+                <Link href="/?location=near-lpu" className="text-gray-300 hover:text-white transition">
+                  Near LPU Properties
                 </Link>
               </li>
             </ul>

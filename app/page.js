@@ -79,8 +79,8 @@ function HomePageContent() {
       title: 'Family Home with Garden',
       description: 'Spacious family home with a beautiful garden, 3 bedrooms, and a newly renovated kitchen.',
       price: 450000,
-      location: 'highland-park',
-      address: '789 Family Circle, Highland Park',
+      location: 'near-lpu',
+      address: '789 Family Circle, Near LPU',
       bedrooms: 3,
       bathrooms: 2.5,
       squareFeet: 2100,
@@ -118,7 +118,7 @@ function HomePageContent() {
               Find Your Dream Home
             </h1>
             <p className="text-xl md:text-2xl text-center max-w-3xl mb-8">
-              Discover exclusive properties in Lawgate, Green Valley, and Highland Park
+              Discover exclusive properties in Lawgate, Green Valley, and Near LPU
             </p>
             
             <div className="flex flex-wrap justify-center gap-4">
@@ -135,10 +135,10 @@ function HomePageContent() {
                 Green Valley
               </a>
               <a 
-                href="/?location=highland-park" 
-                className={`btn-primary ${location === 'highland-park' ? 'bg-blue-700' : ''}`}
+                href="/?location=near-lpu" 
+                className={`btn-primary ${location === 'near-lpu' ? 'bg-blue-700' : ''}`}
               >
-                Highland Park
+                Near LPU
               </a>
               <a 
                 href="/" 

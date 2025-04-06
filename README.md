@@ -18,6 +18,15 @@ A modern real estate web application built with Next.js that allows users to bro
 - **Authentication**: NextAuth.js
 - **Styling**: Tailwind CSS
 
+## Available Locations
+
+The application currently supports the following locations for property listings:
+- Lawgate
+- Green Valley
+- Near LPU
+
+These locations are defined in the Property model and used throughout the application for filtering and categorizing properties.
+
 ## Getting Started
 
 ### Prerequisites
@@ -43,10 +52,24 @@ npm install
 3. Create a `.env.local` file in the root directory with the following variables:
 
 ```
+# Database Connection
 MONGODB_URI=your_mongodb_connection_string
+
+# NextAuth Configuration
 NEXTAUTH_SECRET=your_nextauth_secret
 NEXTAUTH_URL=http://localhost:3000
+
+# Admin Credentials
+ADMIN_USERNAME=admin
+ADMIN_PASSWORD=your_secure_password
+
+# Optional: Cloudinary for Image Upload
+CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
+CLOUDINARY_API_KEY=your_cloudinary_api_key
+CLOUDINARY_API_SECRET=your_cloudinary_api_secret
 ```
+
+Make sure to replace the placeholder values with your actual configuration details.
 
 4. Run the development server:
 
@@ -58,20 +81,14 @@ npm run dev
 
 ## Admin Setup
 
-To access the admin panel, you need to create an admin user in your MongoDB database. 
+The admin panel is secured using environment variables. To access the admin panel, you need to set up the following credentials in your `.env.local` file:
 
-You can do this by creating a user document in the `users` collection with the following structure:
-
-```json
-{
-  "username": "admin",
-  "email": "admin@example.com",
-  "password": "hashed_password",
-  "role": "admin"
-}
+```
+ADMIN_USERNAME=your_admin_username
+ADMIN_PASSWORD=your_admin_password
 ```
 
-For security, make sure to hash the password using bcrypt before storing it.
+These credentials will be used for authentication when you log in to the admin panel.
 
 ## Project Structure
 
@@ -92,6 +109,11 @@ This project can be deployed using services like Vercel, Netlify, or any hosting
 npm run build
 npm start
 ```
+
+## Recent Updates
+
+- **April 2025**: Updated location terminology throughout the application, replacing "Highland Park" with "Near LPU" for better regional relevance
+- Fixed MongoDB model caching issues by implementing cache clearing mechanism in the Property model
 
 ## License
 

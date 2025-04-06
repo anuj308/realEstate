@@ -346,7 +346,7 @@ export default function PropertyForm({ property = null }) {
           >
             <option value="lawgate">Lawgate</option>
             <option value="green-valley">Green Valley</option>
-            <option value="highland-park">Highland Park</option>
+            <option value="near-lpu">Near LPU</option>
           </select>
           {errors.location && <p className="mt-1 text-sm text-red-600">{errors.location}</p>}
         </div>
