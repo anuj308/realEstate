@@ -1,13 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import PropertyCard from './components/PropertyCard';
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 
-export default function Home() {
+function HomePageContent() {
   const [properties, setProperties] = useState([]);
   const [loading, setLoading] = useState(true);
   const [location, setLocation] = useState('all');
@@ -220,5 +220,13 @@ export default function Home() {
       
       <Footer />
     </div>
+  );
+}
+
+export default function Home() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <HomePageContent />
+    </Suspense>
   );
 }

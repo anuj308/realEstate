@@ -1,13 +1,5 @@
 import { v2 as cloudinary } from 'cloudinary';
 
-
-// Debug log env vars
-console.log('Cloudinary Config:', {
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY ? '****'+process.env.CLOUDINARY_API_KEY.slice(-4) : 'not set',
-  api_secret: process.env.CLOUDINARY_API_SECRET ? '****'+process.env.CLOUDINARY_API_SECRET.slice(-4) : 'not set'
-});
-
 // Configure Cloudinary
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
