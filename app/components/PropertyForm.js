@@ -13,6 +13,7 @@ export default function PropertyForm({ property = null }) {
     price: property?.price || '',
     location: property?.location || 'lawgate',
     address: property?.address || '',
+    locationMapUrl: property?.locationMapUrl || '',
     bedrooms: property?.bedrooms || '',
     bathrooms: property?.bathrooms || '',
     squareFeet: property?.squareFeet || '',
@@ -366,6 +367,23 @@ export default function PropertyForm({ property = null }) {
           }`}
         />
         {errors.address && <p className="mt-1 text-sm text-red-600">{errors.address}</p>}
+      </div>
+      
+      <div>
+        <label htmlFor="locationMapUrl" className="block text-sm font-medium text-gray-700 mb-1">
+          Location Map URL
+        </label>
+        <input
+          type="text"
+          id="locationMapUrl"
+          name="locationMapUrl"
+          value={formData.locationMapUrl}
+          onChange={handleChange}
+          className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary ${
+            errors.locationMapUrl ? 'border-red-500' : 'border-gray-300'
+          }`}
+        />
+        {errors.locationMapUrl && <p className="mt-1 text-sm text-red-600">{errors.locationMapUrl}</p>}
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

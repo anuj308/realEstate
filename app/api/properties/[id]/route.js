@@ -5,8 +5,8 @@ export async function GET(request, { params }) {
   try {
     await dbConnect();
     
-    // Get property by ID
-    const { id } = params;
+    // Get property by ID - ensure params is awaited before accessing
+    const id = params.id;
     const property = await Property.findById(id);
     
     if (!property) {
@@ -26,10 +26,11 @@ export async function PUT(request, { params }) {
     
     // Get request body
     const body = await request.json();
+    const id = params.id;
     
     // Update property
     const property = await Property.findByIdAndUpdate(
-      params.id,
+      id,
       body,
       { new: true, runValidators: true }
     );
@@ -50,7 +51,8 @@ export async function DELETE(request, { params }) {
     await dbConnect();
     
     // Delete property
-    const property = await Property.findByIdAndDelete(params.id);
+    const id = params.id;
+    const property = await Property.findByIdAndDelete(id);
     
     if (!property) {
       return Response.json({ message: 'Property not found' }, { status: 404 });

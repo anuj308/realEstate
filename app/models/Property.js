@@ -26,6 +26,12 @@ const PropertySchema = new mongoose.Schema({
     type: String,
     required: [true, 'Please provide an address for the property']
   },
+  locationMapUrl: {
+    type: String,
+    required: false,
+    default: '',
+    description: 'Google Maps URL to the property location'
+  },
   bedrooms: {
     type: Number,
     required: [true, 'Please provide the number of bedrooms'],
